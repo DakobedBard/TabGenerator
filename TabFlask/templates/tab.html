@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+
+
+
+
+    </head>
+    <body>
+
+
+
+            <h3>
+                    {{tab.name}}
+        
+                </h3> 
+        
+
+        <pre>
+{{tab.t}}
+        </pre>
+
+        <table>
+
+                {% for note in tab.tab_notes %}
+              
+                <tr>
+                  <td>{{note}}</td>
+                  
+                </tr>
+              {% endfor %}
+        
+        </table>
+
+
+
+    </body>
+
+</html>

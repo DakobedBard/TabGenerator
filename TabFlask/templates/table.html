@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+    <title>Upload new File</title>
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+
+
+
+<h2>Audio File Table</h2>
+{{title}}
+
+<table>
+
+  {% for filename in filenames %}
+
+  <tr>
+    <td>{{filename}}</td>
+    <td> <a href="/tab/{{filename}}"> <button> Generate Tab</button></a>
+  </tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
+
